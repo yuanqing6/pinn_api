@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from models.pinn_model import WavePINN
 from app.config import settings
-
+device = torch.device("cpu")
 app = FastAPI(
     title="PINN API",
     description="物理信息神经网络求解二维声波方程",
