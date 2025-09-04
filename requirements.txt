@@ -1,0 +1,6 @@
+fastapi==0.116.1
+uvicorn==0.35.0
+torch==2.6.0+cu118  # 明确指定CUDA版本
+numpy==1.23.5        # 兼容TensorFlow的版本
+matplotlib==3.9.4
+pydantic-settings==2.1.0
