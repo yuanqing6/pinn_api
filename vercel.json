@@ -6,8 +6,8 @@
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.9",
-        "installCommand": "pip install --upgrade pip && pip install torch==2.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html && pip install -r requirements.txt",
-        "includeFiles": ["trained_model.pth", "requirements.txt"],
+        "installCommand": "pip install torch==2.6.0 -f https://download.pytorch.org/whl/torch_stable.html && pip install -r requirements.txt",
+        "includeFiles": ["trained_model.pth"],
         "maxLambdaSize": "50mb",
         "maxDuration": 30
       }
@@ -15,15 +15,7 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "app/main.py"
-    },
-    {
-      "src": "/predict",
-      "dest": "app/main.py"
-    },
-    {
-      "src": "/health",
+      "src": "/(.*)",
       "dest": "app/main.py"
     }
   ]
