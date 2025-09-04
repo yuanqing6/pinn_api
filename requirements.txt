@@ -1,6 +1,11 @@
-fastapi==0.116.1
-uvicorn==0.35.0
-torch==2.6.0  
-numpy==1.23.5        # 兼容TensorFlow的版本
+
+--platform manylinux2014_x86_64
+--only-binary=:all:
+torch==2.6.0+cpu
+fastapi==0.104.1
+uvicorn==0.24.0
+numpy==1.26.0
+pydantic==2.5.0
+gdown==4.7.1     
 matplotlib==3.9.4
 pydantic-settings==2.1.0
