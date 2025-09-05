@@ -1,0 +1,10 @@
+# 忽略不需要的文件
+*.pth
+*.pkl
+*.h5
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
