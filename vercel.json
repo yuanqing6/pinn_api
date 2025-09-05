@@ -2,15 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "app/main.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.9",
-        "installCommand": "pip install torch==2.6.0 -f https://download.pytorch.org/whl/torch_stable.html && pip install -r requirements.txt",
-        "includeFiles": ["trained_model.pth"],
-        "maxLambdaSize": "50mb",
-        "maxDuration": 30
-      }
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
   ],
   "routes": [
